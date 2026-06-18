@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推し活聖地巡礼マップ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="theme-pink">
+    <button class="menu-toggle" type="button" aria-label="メニューを開く">
+        ☰
+    </button>
+
+    <aside class="sidebar" aria-label="テーマカラー選択メニュー">
+        <div class="sidebar__inner">
+            <h2 class="sidebar__title">テーマカラー</h2>
+            <p class="sidebar__text">
+                推しのメンバーカラーに合わせて、画面の雰囲気を切り替えられます。
+            </p>
+
+            <div class="theme-buttons">
+                <button type="button" class="theme-btn" data-theme="theme-pink"></button>
+                <button type="button" class="theme-btn" data-theme="theme-red"></button>
+                <button type="button" class="theme-btn" data-theme="theme-blue"></button>
+                <button type="button" class="theme-btn" data-theme="theme-yellow"></button>
+                <button type="button" class="theme-btn" data-theme="theme-green"></button>
+                <button type="button" class="theme-btn" data-theme="theme-black"></button>
+            </div>
+        </div>
+    </aside>
+
+    <div class="overlay"></div>
+
+    <header class="hero">
+        <p class="eyebrow">Oshi Travel Map</p>
+        <h1>あなたの推しが訪れた場所を、巡礼ルートでまとめる。</h1>
+        <p class="lead">
+            YouTubeやテレビ番組の情報をもとに、聖地候補を地図に表示し、回る順番まで提案するアプリです。
+        </p>
+    </header>
+
+    <main class="app">
+        <section class="search-panel">
+            <h2>検索条件</h2>
+
+            <div class="field">
+                <label for="keyword">推しの名前・グループ名・動画タイトル</label>
+                <input id="keyword" type="text" placeholder="例：〇〇 シンガポール YouTube">
+            </div>
+
+            <div class="field">
+                <label for="channel">YouTubeチャンネルURLまたはチャンネル名</label>
+                <input id="channel" type="text" placeholder="例：https://www.youtube.com/@channel">
+            </div>
+
+            <button id="searchButton" type="button">推しが訪れた場所を探す</button>
+        </section>
+
+        <section class="content">
+            <section class="map-panel">
+                <h2>地図</h2>
+                <div id="map" class="map-box">
+                    <p>ここにGoogle Mapsを表示します</p>
+                </div>
+            </section>
+
+            <section class="route-panel">
+                <h2>聖地巡礼ルート候補</h2>
+                <ol id="routeList" class="route-list">
+                    <li>検索後にルート順に表示されます</li>
+                </ol>
+            </section>
+        </section>
+
+        <section class="result-panel">
+            <h2>聖地巡礼候補一覧</h2>
+            <ul id="resultList" class="result-list">
+                <li>検索後に候補が表示されます</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>推し活聖地巡礼マップ</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=xxx"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
