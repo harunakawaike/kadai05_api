@@ -7,7 +7,7 @@
 - 検索した動画から場所候補を抽出し、巡礼ルートの順番も見られる。
 
 ## ③アプリのデプロイURL
-デプロイしている場合はURLを記入（任意）
+https://harunakawaike.github.io/kadai05_api/
 
 ## ④アプリのログイン用IDまたはPassword（ある場合）
 - ID: -
